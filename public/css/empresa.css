@@ -1,0 +1,85 @@
+
+.content_nosotros {
+    height: 400px;
+    position: relative; /* Necesario para posicionar el contenido dentro de .content_nosotros */
+    background-image: url('https://images.unsplash.com/photo-1665686308827-eb62e4f6604d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Fondo opaco oscuro */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+    }
+  }
+
+  .content_nosotros h1 {
+    position: relative; /* Asegura que el texto esté posicionado encima del fondo opaco */
+    z-index: 1; /* Coloca el texto encima del fondo opaco */
+    padding: 20px; /* Ajusta según sea necesario para separar el texto del borde */
+    color: #fff;
+    text-align: center;
+  }
+
+
+    /* Estilos generales */
+    .section {
+        padding: 80px 0;
+        text-align: center;
+      }
+
+      /* Estilos para las secciones de Misión y Visión */
+      .mission-vision {
+        background-color: #f8f9fa;
+      }
+
+      .mission-vision h2 {
+        color: #343a40;
+      }
+
+      .mission-vision p {
+        color: #6c757d;
+      }
+
+      /* Estilos de animación */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Aplicar animación a los elementos con la clase 'animate' */
+      .animate {
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .history {
+        background-color: #f9f9f9;
+        color: #333;
+        padding: 50px 0;
+      }
+
+      .history h2 {
+        color: #ff6b6b;
+      }
+
+      .history img {
+        max-width: 90%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .history p {
+        font-size: 18px;
+      }

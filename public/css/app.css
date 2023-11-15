@@ -1,0 +1,64 @@
+li{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-scroll {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar {
+    transition: box-shadow 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que el z-index sea mayor que cualquier otro elemento fijo */
+
+}
+
+/* Estilos para los enlaces de navegación */
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: #fefefe;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff4500; /* Color de resaltado al pasar el ratón */
+}
+
+/* Estilos para el botón de alternar en dispositivos móviles */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #333; /* Color del icono del botón */
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/* Ajusta la altura del área de navegación en dispositivos móviles */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        background-color: #00284c; /* Fondo para el menú desplegable en dispositivos móviles */
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-nav {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+}
+
+

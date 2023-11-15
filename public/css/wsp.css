@@ -1,0 +1,37 @@
+.radar-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté en la parte superior */
+}
+
+.radar-button img {
+    width: 60px; /* Ajusta el tamaño según tus necesidades */
+}
+
+.waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid #25d366;
+    border-radius: 50%;
+    animation: radar-animation 2s linear infinite;
+}
+@keyframes radar-animation {
+    0% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0.2;
+    }
+}
+

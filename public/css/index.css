@@ -1,0 +1,527 @@
+  /* Estilos para las imágenes y textos */
+  .carousel-item img {
+    width: 100%;
+    max-height: 800px; /* Altura máxima deseada */
+    object-fit: cover; /* Escala y recorta la imagen */
+}
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro con opacidad */
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+}
+.carousel-caption h3, .carousel-caption p {
+    font-size: 24px; /* Tamaño del texto */
+    color: white;
+}
+/* Estilo para los botones de navegación */
+.carousel-control-prev, .carousel-control-next {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: transparent;
+}
+.carousel-control-prev-icon::before, .carousel-control-next-icon::before {
+    content: "";
+}
+/* Estilo para los controles de navegación en dispositivos móviles */
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+  /* Estilos para la sección de Clientes */
+  .clientes-section {
+    text-align: center;
+    padding: 20px;
+}
+.clientes-container {
+    overflow: hidden;
+}
+.clientes-logos {
+    white-space: nowrap;
+}
+.cliente-logo {
+    display: inline-block;
+    margin: 0 20px; /* Espacio entre logos */
+}
+
+.frase{ font-family: 'Edu TAS Beginner', cursive;}
+
+
+   /* Estilos para la sección de Clientes */
+   .clientes-section {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.clientes-container {
+    overflow: hidden;
+}
+.clientes-logos {
+    white-space: nowrap;
+}
+.cliente-logo {
+    display: inline-block;
+    margin: 0 10px; /* Espacio entre logos */
+    max-width: 200px; /* Ancho máximo de los logos */
+}
+
+
+    /* Estilos para la sección de Productos y Servicios */
+    .productos-section {
+        text-align: center;
+        padding: 20px;
+    }
+    .producto-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px;
+    }
+
+
+        /* Estilos para la sección de Clientes */
+        .clientes-section {
+            text-align: center;
+            padding: 20px;
+        }
+        .client-item {
+            display: inline-block;
+            margin: 10px;
+        }
+
+
+/* Nosostros */
+
+
+.div-1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color:#0061a4;
+    width: 100%;
+    height: 450px;
+    margin: 40px 0px 40px 0px
+}
+
+.prueba{
+    margin-bottom: 20px;
+    margin-top: 70px;
+}
+
+.titulos h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.contenidos{
+    display: inline-block;
+    text-align: center;
+    margin-top: 20px;
+    width: 65% ;
+    font-size: 20px;
+}
+
+.contenidos a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(252, 255, 255);
+}
+
+.contenidos a:hover{
+    text-decoration: underline ;
+}
+
+/* responsive de nosotros */
+@media (min-width: 300px) and (max-width: 1076px) {
+
+    .div-1{
+        height: 100%;
+    }
+
+    .prueba{
+        margin-top: 20px;
+    }
+}
+
+/* Ajustes de estilo para la sección Nosotros */
+.prueba {
+    padding: 20px;
+}
+
+.titulos {
+    margin-bottom: 20px;
+}
+
+.contenidos {
+    margin-bottom: 20px;
+}
+
+/* Ajustes de estilo para la imagen de la persona señalando */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Borde redondeado para la imagen */
+}
+
+/* Estilos para la sección de Testimonios */
+.testimonials-section {
+    text-align: center;
+    padding: 20px;
+}
+.testimonial-card {
+    margin: 20px;
+}
+.card-color-1 {
+    background-color: #123a51;
+}
+.card-color-2 {
+    background-color: #156a95;
+}
+.card-color-3 {
+    background-color: #20a8d9;
+}
+.card-color-4 {
+    background-color: #20dad8;
+}
+
+/* Testimonios */
+
+#testimonios{
+    height: 380px;
+    width: 85%;
+}
+
+.nombre{
+    font-size: 20px;
+    margin-top: -20px;
+    color: white;
+    font-weight: bold;
+}
+
+#referencia{
+    color: gray;
+    font-size: 13px;
+}
+
+#autor{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.card-title{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+}
+
+#content-tes{
+    padding: 20px;
+    text-align: left;
+    font-size: 15px;
+
+}
+
+.circular-image {
+    border: 2px solid white; /* Establece el ancho del borde y su color */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    margin-left: 20px;
+
+}
+::selection {
+    background-color: black; /* Cambia el color de fondo */
+    color: white; /* Cambia el color del texto */
+}
+
+/* responsive*/
+@media (min-width: 665px) and (max-width: 1200px) {
+
+    #testimonios{
+        width: 100%;
+        height: 90%;
+    }
+
+}
+/* Nosotros */
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .imagebox-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .imagebox-img {
+    margin-right: 20px;
+  }
+
+
+/* footer*/
+
+a{
+    text-decoration: none;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+#footer{
+    background-color: #000000;
+}
+
+#footer:hover{
+    color: white;
+}
+
+
+.footer-link{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+.links{
+
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+
+
+}
+
+.link{
+    margin: 50px 70px 30px 0 ;
+}
+
+
+.redes{
+    margin: 50px 30px 30px 0px ;
+    position: relative;
+    left: 2%;
+
+}
+
+
+
+#redes-img{
+    position: relative;
+    right: 7%;
+}
+
+.enlaces a{
+    display: block;
+    margin-top: 27px;
+    margin-bottom: 35px;
+    color: gray;
+
+}
+
+.enlaces a:hover{
+    color: white;
+    text-decoration: underline ;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+
+}
+
+
+.sociales{
+    display: flex;
+   margin-bottom: 30px;
+}
+
+
+#informes{
+    display: flex;
+    flex-direction: row;
+
+}
+
+input
+{
+    background-color: transparent;
+    padding: 14px;
+    outline: none;
+    border: 2px solid #5F5F6E;
+    font-size:17px;
+    margin-bottom: 15px;
+    color: #B7B8BE;
+}
+
+#correo{
+    width:310px;
+}
+
+#btn:hover{
+
+    background-color: burlywood;
+    color: #3d3d49;
+
+}
+
+hr
+{
+   border: 1px solid;
+}
+
+.imagenes-pagos{
+    display: flex;
+    margin-top: 12px;
+    gap: 10px;
+    filter: grayscale(100%);
+}
+
+.masterCard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+}
+
+.visa{
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.footer-text{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.copy{
+   display: flex;
+   justify-content: center;
+   position: relative;
+   left: 5%;
+
+}
+
+#logo-pa{
+
+    margin-right: 20px;
+
+}
+.copy img{
+    background-color: white;
+}
+.copy p{
+    margin-top: 12px;
+
+}
+
+@media (max-width: 905px) {
+   .footer-text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .contenido-Copy p{
+    font-size: 10px;
+    flex-wrap: wrap;
+   }
+   .redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+}
+
+
+@media (min-width: 300px) and (max-width: 513px) {
+    .redes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #informes{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.pilares-section {
+    padding: 80px 0;
+    border-radius: 50px;
+    background: #3be5e8;
+    box-shadow:  20px 20px 0px #32c3c5,
+                 -20px -20px 0px #44ffff;
+  }
+
+  .pilares-img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .pilar-box {
+    margin-top: 40px;
+  }
+
+  .pilar-box img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pilar-box h5 {
+    margin-top: 15px;
+    color: #333;
+  }
+
+  .pilar-box p {
+    color: #666;
+  }
+
+
+  .cotizacion-section {
+    padding: 80px 0;
+    border-radius: 50%;
+background: linear-gradient(315deg, #317bb5, #3a93d7);
+box-shadow:  -50px -50px 100px #2e74ab,
+             50px 50px 100px #3e9ee7;
+  }
+
+  .cotizacion-img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .cotizacion-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .cotizacion-form label {
+    font-weight: bold;
+  }
