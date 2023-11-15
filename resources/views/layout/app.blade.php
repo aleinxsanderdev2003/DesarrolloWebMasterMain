@@ -26,6 +26,34 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Muestra el loader
+        function showLoader() {
+            $('#loader').fadeIn();
+        }
+
+        // Oculta el loader y muestra el contenido después de un tiempo (por ejemplo, 3 segundos)
+        setTimeout(function () {
+            $('#loader').fadeOut(function () {
+                $(this).addClass('hidden-content');
+            });
+        }, 3000);
+
+        // Ejemplos de uso
+        // Muestra el loader al cargar la página
+        $(document).ready(function () {
+            showLoader();
+        });
+    </script>
+
+
+    <div class="loader" id="loader">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background:#000011;">
         <div class="container">

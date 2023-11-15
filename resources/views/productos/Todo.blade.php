@@ -1,4 +1,3 @@
-@extends('layout.app')
 @extends('productos.index')
 @section('contenido')
 <div class="row mt-3">

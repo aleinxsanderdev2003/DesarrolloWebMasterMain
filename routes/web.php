@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 /*
+use App\Http\Controllers\LoginControlle;
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -33,3 +35,6 @@ Route::get('/categorias/{categoria}', [ProductoController::class, 'mostrarCatego
 
 Route::get('/productos', [ProductController::class, 'index'])->name('productos.index');
 Route::get('/categorias/{categoria}', [ProductController::class, 'mostrarCategoria']);
+
+/*AUTENTICACION*/
+Route::get('/login', [LoginController::class, 'index'])->name('login');
