@@ -133,7 +133,7 @@
       <div class="container mt-5 cotizacion-section">
         <div class="row">
           <div class="col-md-6">
-            <img src="https://o.remove.bg/downloads/c12b5ac6-023c-4b9a-8280-42af9ae0d516/image-removebg-preview.png" class="img-fluid cotizacion-img" alt="Cotización">
+            <img src="{{asset('img/contacto.png')}}" class="img-fluid cotizacion-img" alt="Cotización">
           </div>
           <div class="col-md-6">
             <div class="cotizacion-form">

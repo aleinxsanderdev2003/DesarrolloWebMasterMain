@@ -23,4 +23,8 @@ class LinkController extends Controller
     public function header(){
         return view("header");
     }
+
+    public function servicios(){
+        return view("servicios");
+    }
 }
