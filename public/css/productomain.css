@@ -26,6 +26,6 @@
 }
 
 #sidebar .nav-link:hover {
-    color: #007bff; /* Color del texto al pasar el ratón */
+    color:  rgb(0, 238, 255); /* Color del texto al pasar el ratón */
 }
 

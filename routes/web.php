@@ -21,7 +21,7 @@ use App\Http\Controllers\LoginControlle;
 Route::get('/', [LinkController::class, 'index'])->name('index');
 Route::get('/empresa', [LinkController::class, 'empresa'])->name('empresa');
 Route::get('/contacto', [LinkController::class, 'contacto'])->name('contacto');
-Route::get('/header', [LinkController::class, 'header'])->name('header');
+Route::get('/servicios', [LinkController::class, 'servicios'])->name('servicios');
 
 
 

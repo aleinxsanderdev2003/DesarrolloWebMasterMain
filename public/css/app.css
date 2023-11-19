@@ -108,7 +108,7 @@ li{
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ff4500; /* Color de resaltado al pasar el ratón */
+    color: rgb(0, 238, 255); /* Color de resaltado al pasar el ratón */
 }
 
 /* Estilos para el botón de alternar en dispositivos móviles */

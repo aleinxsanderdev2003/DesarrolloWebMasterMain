@@ -19,6 +19,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- Estilos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/wsp.css')}}">
@@ -28,33 +31,31 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
-        // Muestra el loader
-        function showLoader() {
-            $('#loader').fadeIn();
-        }
-
-        // Oculta el loader y muestra el contenido después de un tiempo (por ejemplo, 3 segundos)
+    document.addEventListener("DOMContentLoaded", function () {
+    // Simula un tiempo de carga (puedes ajustar esto según tus necesidades)
+    setTimeout(function () {
+        // Oculta el loader
+        document.getElementById("loader").style.opacity = 0;
+        // Muestra el contenido
+        document.querySelector(".content").style.display = "block";
+        // Espera un poco antes de establecer la opacidad a 1 para una transición suave
         setTimeout(function () {
-            $('#loader').fadeOut(function () {
-                $(this).addClass('hidden-content');
-            });
-        }, 3000);
+            document.getElementById("loader").style.display = "none";
+            document.querySelector(".content").style.opacity = 1;
+        }, 500);
+    }, 2000); // Esto simula un tiempo de carga de 2 segundos, ajusta según sea necesario
+});
 
-        // Ejemplos de uso
-        // Muestra el loader al cargar la página
-        $(document).ready(function () {
-            showLoader();
-        });
     </script>
 
-
+<div id="loader-container">
     <div class="loader" id="loader">
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
     </div>
-
+</div>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background:#000011;">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="img/logo.png" alt="Logo" width="80" height="70"></a>
@@ -73,7 +74,7 @@
                         <a class="nav-link" href="{{route('tienda')}}">Tienda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Servicios</a>
+                        <a class="nav-link" href="{{route('servicios')}}">Servicios</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('contacto')}}">Contacto</a>

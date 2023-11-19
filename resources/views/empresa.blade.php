@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section("content")
 <link rel="stylesheet" href="{{asset("css/empresa.css")}}">
-<div class="content_nosotros">
+<div class="content_nosotros" style="margin-top:-30px">
     <h1>Mi Página con Fondo de Imagen</h1>
   </div>
 

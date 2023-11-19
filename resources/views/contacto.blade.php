@@ -1,7 +1,9 @@
 @extends('layout.app')
 @section('content')
 <link rel="stylesheet" href="{{asset('css/contacto.css')}}">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 <div class="parallax-container">
     <div class="parallax">
         <!-- Agrega aquí la URL de tu imagen de fondo -->
@@ -33,7 +35,7 @@ background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);box-shadow: 
     <div class="row">
         <div class="col-lg-8 mx-auto">
             <div class="contact-form">
-                <h2 class="text-center mb-4">Contáctanos</h2>
+                <h1 class="text-center mb-4" style="font-family: 'Acme', sans-serif;">Contáctanos</h1>
 
                 <form id="contactForm">
                     <div class="form-group">
