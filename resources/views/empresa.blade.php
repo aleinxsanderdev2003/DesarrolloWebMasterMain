@@ -30,7 +30,10 @@
           <h2>Historia</h2>
           <p>Desde nuestro inicio en [año], hemos recorrido un camino de constante evolución y crecimiento. Cada paso ha sido guiado por nuestra pasión por la tecnología y el deseo de ofrecer soluciones web excepcionales.</p>
         </div>
-        <div class="col-md-6 animate">
+        <div class="col-md-6 animate" style="border-radius: 50px;
+        background: #000000;
+        box-shadow:  20px 20px 60px #000000,
+                     -20px -20px 60px #000000;">
           <img src="img/logo.png" alt="Imagen Histórica 2">
         </div>
       </div>

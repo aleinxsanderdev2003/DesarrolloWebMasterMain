@@ -25,7 +25,10 @@
     color: #ffffff; /* Color del texto */
 }
 
+
 #sidebar .nav-link:hover {
     color:  rgb(0, 238, 255); /* Color del texto al pasar el ratón */
 }
+
+
 
