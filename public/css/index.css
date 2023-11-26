@@ -460,8 +460,18 @@ hr
     #informes{
         display: flex;
         flex-direction: column;
+
     }
 
+
+    .copy{
+
+        display: flex;
+        margin-top: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .links{
         display: flex;

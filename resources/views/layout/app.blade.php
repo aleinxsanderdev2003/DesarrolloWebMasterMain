@@ -161,17 +161,17 @@
                 <div class="imagenes-pagos">
                     <div class="visa">
                         <a href="">
-                            <img width="40px" class="circular-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/2048px-2021_Facebook_icon.svg.png" alt="">
+                            <img width="60px"  src="https://i.ibb.co/WKK1S8h/visa.png" alt="">
                         </a>
                     </div>
                     <div class="masterCard">
                         <a href="">
-                            <img width="40px" class="circular-image" src="https://cdn.pixabay.com/photo/2021/06/15/12/28/tiktok-6338430_1280.png" alt="">
+                            <img width="80px" src="https://i.ibb.co/3R7mWrH/marter-Card.png" alt="">
                         </a>
                     </div>
                     <div class="paypal">
                         <a href="">
-                            <img width="40px" class="circular-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/768px-Instagram-Icon.png" alt="">
+                            <img width="50px" src="https://i.ibb.co/f9mRQF0/paypal.png" alt="">
                         </a>
                     </div>
                 </div>
