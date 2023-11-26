@@ -27,21 +27,25 @@
     background-color: #0056b3;
     border-color: #0056b3;
 }
-.parallax-container {
+.content_nosotros {
+    height: 400px;
+    position: relative; /* Necesario para posicionar el contenido dentro de .content_nosotros */
+    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    position: relative;
-    height: 500px; /* Ajusta la altura según tus necesidades */
-    overflow: hidden;
-}
 
-.parallax {
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
+    /* Fondo opaco oscuro */
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad según sea necesario */
+    }
+  }
 
 

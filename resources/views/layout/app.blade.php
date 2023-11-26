@@ -114,14 +114,15 @@
                     </div>
                     <div class="link">
                         <h2>
-                            prueba 2
+                            Visitar
                         </h2>
                         <div class="enlaces">
                             <ul>
-                                <li><a href="">ejemplo</a></li>
-                                <li><a href="">ejemplo</a></li>
-                                <li><a href="">ejemplo</a></li>
-                                <li><a href="">ejemplo</a></li>
+                                <li><a href="{{route('index')}}">Inicio</a></li>
+                                <li><a href="{{route('servicios')}}">Servicios</a></li>
+                                <li><a href="{{route('empresa')}}">Empresa</a></li>
+                                <li><a href="{{route('tienda')}}">Tienda</a></li>
+                                <li><a href="{{route('contacto')}}">Contacto</a></li>
                             </ul>
                         </div>
                     </div>

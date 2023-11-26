@@ -4,25 +4,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/servicios.css">
-<div class="parallax-container">
-    <div class="parallax">
-        <!-- Agrega aquí la URL de tu imagen de fondo -->
-        <img src="https://images.unsplash.com/photo-1579389082289-3d6922d506c4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fondo de Parallax">
-    </div>
+<meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xrXmPMSmBduyZba6tf+PrA8sCNxZP1BC8AotZZQGoH/OqZnRtXaQO4KKfZ67wLsfdd0R0VAfcgQpWwEG3bBEV4Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-white">
-                <div class="contact-form">
-                    <h2 class="text-center mb-4" style="font-family: 'EB Garamond', serif;">Contáctanos</h2>
-                    <form id="contactForm">
-                        <!-- Tus campos de formulario aquí -->
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="content_nosotros" style="margin-top:-30px">
+    <h1>Mi Página con Fondo de Imagen</h1>
+  </div>
 
 <div class="container mt-5">
     <h1 class="text-center" style="font-family: 'Acme', sans-serif;">Nuestros Servicios</h1>
@@ -40,7 +27,7 @@
                     <p style="font-family: 'Acme', sans-serif;">Plan Personal</p>
                 </div><br>
                 <br>
-                <a style="margin-top: 70px; padding-right:20px" class="btn btn-success">Ver más</a>
+
             </div>
 
 
@@ -65,18 +52,50 @@
 
     <!-- Buscador de Dominios -->
     <section id="domain-search" class="mt-4">
-
         <h2>Buscador de Dominios</h2>
+        <form id="domain-search-form">
+            @csrf
+            <div class="input-group mb-3">
+                <input type="text" name="domain" id="domain-input" class="form-control" placeholder="Escribe tu dominio aquí" aria-label="Dominio" aria-describedby="button-search" required>
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="button-search">
+                    <button class="btn btn-outline-primary" type="button" id="button-search"> <i class="fas fa-search"></i> Buscar</button>
 
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Escribe tu dominio aquí" aria-label="Dominio" aria-describedby="button-search">
-            <div class="input-group-append">
-                <button class="btn btn-outline-primary" type="button" id="button-search">Buscar</button>
+                    </span>
+                </div>
             </div>
-        </div>
+        </form>
 
-        <p id="domain-availability"></p>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+     document.getElementById('button-search').addEventListener('click', function () {
+    var domain = document.getElementById('domain-input').value;
+
+    fetch('/buscar-dominio', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+        },
+        body: JSON.stringify({ domain: domain })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.message.includes('disponible')) {
+            Swal.fire('¡Dominio Disponible!', data.message, 'success');
+        } else {
+            Swal.fire('Dominio Ocupado', data.message, 'error');
+        }
+    })
+    .catch(error => {
+        console.error('Error al realizar la solicitud:', error);
+        Swal.fire('Error', 'Ha ocurrido un error al verificar la disponibilidad del dominio.', 'error');
+    });
+});
+
+    </script>
 </div>
 
 

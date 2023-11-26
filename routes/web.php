@@ -5,6 +5,8 @@ use App\Http\Controllers\LinkController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\DomainSearchController;
+use App\Http\Controllers\ContactController;
 /*
 use App\Http\Controllers\LoginControlle;
 |--------------------------------------------------------------------------
@@ -38,3 +40,13 @@ Route::get('/categorias/{categoria}', [ProductController::class, 'mostrarCategor
 
 /*AUTENTICACION*/
 Route::get('/login', [LoginController::class, 'index'])->name('login');
+
+
+/*BUSCADOR DE DOMINIO*/
+
+
+Route::get('/servicios', [DomainSearchController::class,'showForm'])->name('servicios');
+Route::post('/buscar-dominio', [DomainSearchController::class,'checkAvailability'])->name('check.domain.availability');
+
+
+Route::post('/enviar-mensaje', [ContactController::class, 'enviarMensaje'])->name('enviar-mensaje');
