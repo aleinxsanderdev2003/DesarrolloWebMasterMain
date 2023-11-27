@@ -1,4 +1,5 @@
 @extends('layout.app')
+
 @section('content')
 <div class="container mt-5">
     <div class="row">
@@ -152,5 +153,11 @@
     </ul>
 </nav>
   </div>
+
+
+
+  <h1>
+    hello
+  </h1>
 
 @endsection

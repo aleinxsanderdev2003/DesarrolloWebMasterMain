@@ -93,7 +93,11 @@
             }
         });
     </script>
-@yield('content')
+
+    <main class="py-4">
+        @yield('content')
+    </main>
+
 
     <footer class="text-light  py-3" id="footer">
         <div class="contaiyner">
@@ -197,6 +201,10 @@
          <script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
          <script src="{{asset('js/boton_wsp.js')}}"></script>
          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+
 
 </body>
 </html>

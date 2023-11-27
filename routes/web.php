@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\capturaController;
+use App\Http\Controllers\CarritoController;
+
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\CategoriaController;
@@ -33,7 +38,7 @@ Route::get('/cotizar', [ProductController::class, 'cotizar'])->name('cotizar');
 
 
 Route::get('/tienda', [CategoriaController::class, 'index'])->name('tienda');
-Route::get('/categorias/{categoria}', [ProductoController::class, 'mostrarCategoria']);
+Route::get('/categorias/{categoria}', [ProductController::class, 'mostrarCategoria']);
 
 Route::get('/productos', [ProductController::class, 'index'])->name('productos.index');
 Route::get('/categorias/{categoria}', [ProductController::class, 'mostrarCategoria']);
@@ -50,3 +55,26 @@ Route::post('/buscar-dominio', [DomainSearchController::class,'checkAvailability
 
 
 Route::post('/enviar-mensaje', [ContactController::class, 'enviarMensaje'])->name('enviar-mensaje');
+
+
+
+/* prueba de rutas tienda */
+
+
+Route::get('/productos', [ProductosController::class, 'listado'])->name('productos');
+Route::get('/detalles', [ProductosController::class, 'detalles']);
+Route::get('/tienda', [ProductosController::class, 'tienda'])->name('tienda');
+Route::get('/pago', [ProductosController::class, 'pago'])->name('pago');
+
+// Route::get('/mercado-pago', [MercadoPagoController::class, 'mercadoP'])->name('mercado-pago');
+
+Route::post('/captura', [capturaController::class, 'captura'])->name('captura.captura');
+Route::get('/completado', [CapturaController::class,'completado'])->name('completado');
+
+
+Route::post('/carrito/agregar-producto', [CarritoController::class, 'agregarProducto'])->name('carrito.agregarProducto');
+Route::post('/carrito/actualizar-carrito', [CarritoController::class, 'actualizarCarrito'])->name('carrito.actualizarCarrito');
+Route::get('carrito/obtener-numero-productos', [CarritoController::class, 'obtenerNumeroProductos'])->name('carrito.obtenerNumeroProductos');
+
+
+
