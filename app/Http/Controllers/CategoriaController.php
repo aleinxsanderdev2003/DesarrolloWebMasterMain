@@ -9,6 +9,6 @@ class CategoriaController extends Controller{
 {
       // Obtener todas las categorías
       $categorias = Categoria::all();
-      return view('productos.index', compact('categorias'));
+      return view('tienda.index', compact('categorias'));
 }
 }
