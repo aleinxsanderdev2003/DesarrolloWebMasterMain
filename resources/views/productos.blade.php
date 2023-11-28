@@ -14,19 +14,19 @@
 @section("content")
 
 
+     <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">Carrito <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a>
 
-    {{-- <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">Carrito <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a> --}}
 
+<div style="margin-top: 100px">
     <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">
 
         <img src="{{asset('img/carrito.png')}}" alt="Descripción de la imagen" width="30" height="30">
         <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span>
     </a>
 
+
 <div style="margin-top: 100px">
     <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">Carrito <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a>
-
-
 
 
 
