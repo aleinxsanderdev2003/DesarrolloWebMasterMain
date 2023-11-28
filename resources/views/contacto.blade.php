@@ -9,8 +9,9 @@
   </div>
 
 <div class="container continero mt-5" style="border-radius: 50px;
-background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);box-shadow:  20px 20px 60px #62b0d2,
-             -20px -20px 60px #84eeff;">
+background: #31cdd8;
+box-shadow:  20px 20px 60px #2aaeb8,
+             -20px -20px 60px #38ecf8;">
     <div class="row">
         <div class="col-lg-8 mx-auto">
             <div class="contact-form">
@@ -37,17 +38,27 @@ background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);box-shadow: 
                     <label class="labeli" for="mensaje">Mensaje:</label>
                     <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
                 </div>
-
+                <div class="form-group">
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                    @error('g-recaptcha-response')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
                 <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
             </form>
-
-
-
             </div>
         </div>
     </div>
 </div>
-
+<script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LcQwxwpAAAAACXFwtV3GQZbb2kK0yF21yQR5UTL', {action: 'LOGIN'});
+      });
+    }
+  </script>
   <script>
     function enviarMensaje() {
   // Aquí puedes agregar la lógica para enviar el mensaje y actualizar la lista de consultas recientes

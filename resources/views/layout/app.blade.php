@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <meta property="og:site_name" content="Diseño de páginas web | Creación de páginas web" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta property="og:site_name" content="Diseño de páginas web | Creación de páginas web" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- CSS de Bootstrap 5 -->
@@ -20,14 +20,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- Estilos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/index.css')}}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="{{asset('css/wsp.css')}}">
-</head><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcQwxwpAAAAACXFwtV3GQZbb2kK0yF21yQR5UTL" async defer></script>
+    </head><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 <body>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
@@ -104,16 +105,13 @@
             <div class="footer-link">
                 <div class="links">
                     <div class="link">
-                        <h2>
-                            prueba 1
-                        </h2>
                         <div class="enlaces">
-                            <ul>
-                                <li><a href="">ejemplo</a></li>
-                                <li><a href="">ejemplo</a></li>
-                                <li><a href="">ejemplo</a></li>
-                                <li><a href="">ejemplo</a></li>
-                            </ul>
+                            <div class="logo-descripcion">
+                                <img width="150px" src="img/logo.png" alt="Logo de Mi Empresa">
+                                <p>Descubre lo que nos hace únicos.</p>
+                                <p>Somos una empresa comprometida con la excelencia y la satisfacción del cliente.</p>
+                                <p>Ofrecemos servicios de alta calidad y valores que nos distinguen en el mercado.</p>
+                                 </div>
                         </div>
                     </div>
                     <div class="link">
