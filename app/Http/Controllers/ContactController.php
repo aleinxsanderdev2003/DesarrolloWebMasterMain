@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
-
+use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
 class ContactController extends Controller
 {
     public function enviarMensaje(Request $request)
@@ -14,6 +14,7 @@ class ContactController extends Controller
             'nombre' => 'required',
             'email' => 'required|email',
             'mensaje' => 'required',
+            'g-recaptcha-response' => 'required|captcha', // Validar reCAPTCHA
         ]);
 
         // Enviar el correo
