@@ -9,7 +9,7 @@
 
 </head>
 <body>
-   
+
 
     <a href="{{ route('tienda') }}" class="btn btn-primary float-end" id="carritoss">Carrito <span id="num_cart" class="badge bg-secondary">{{ config('custom.num_cart') }}</span></a>
 

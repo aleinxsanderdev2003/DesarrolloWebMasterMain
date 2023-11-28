@@ -9,7 +9,7 @@
 
 </head>
 <body>
-   
+
 
 
     <a class="btn btn-primary float-end" id="carritoss">Carrito <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a>
@@ -132,7 +132,7 @@
         }  window.addEventListener('load', actualizarCarrito);
             setInterval(actualizarCarrito, 1000);
     </script>
-
+{{-- 
     <script>
         function addProducto(id, token) {
             let url = '{{ route("carrito.agregarProducto") }}';
@@ -153,7 +153,7 @@
                 }
             });
         }
-    </script>
+    </script> --}}
 
 
     {{--  --}}

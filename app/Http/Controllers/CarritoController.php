@@ -11,6 +11,7 @@ class CarritoController extends Controller
     public function agregarProducto(Request $request)
     {
         $id = $request->input('id');
+        // $carrito = $request->input('cantidad');
         $token = $request->input('token');
         // Obtiene el ID y el token del producto que se va a agregar al carrito
 
