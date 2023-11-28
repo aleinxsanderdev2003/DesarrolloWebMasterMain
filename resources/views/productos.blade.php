@@ -9,28 +9,20 @@
 
 </head>
 <body>
-<<<<<<< HEAD
-
-=======
->>>>>>> 3983d62205b86fc2e1bf54c0675afcd9f2720f91
 
 @extends("layout.app")
 @section("content")
 
-<<<<<<< HEAD
 
     {{-- <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">Carrito <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a> --}}
 
+
+<div style="margin-top: 100px">
     <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">
-        
+
         <img src="{{asset('img/carrito.png')}}" alt="Descripción de la imagen" width="30" height="30">
         <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span>
     </a>
-=======
-<div style="margin-top: 100px">
-    <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">Carrito <span id="num_cart" class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a>
->>>>>>> 3983d62205b86fc2e1bf54c0675afcd9f2720f91
-
 
 
 
