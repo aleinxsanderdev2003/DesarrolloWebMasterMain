@@ -4,7 +4,6 @@ use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\capturaController;
 use App\Http\Controllers\CarritoController;
 
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\CategoriaController;
@@ -12,6 +11,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DomainSearchController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FormularioController;
 /*
 use App\Http\Controllers\LoginControlle;
 |--------------------------------------------------------------------------
@@ -55,6 +55,7 @@ Route::post('/buscar-dominio', [DomainSearchController::class,'checkAvailability
 
 
 Route::post('/enviar-mensaje', [ContactController::class, 'enviarMensaje'])->name('enviar-mensaje');
+Route::post('/enviar-mensaje2', [FormularioController::class, 'enviarMensaje'])->name('enviar-mensaje2');
 
 
 

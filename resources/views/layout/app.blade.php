@@ -72,7 +72,7 @@
                         <a class="nav-link" href="{{route('empresa')}}">Empresa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('tienda')}}">Tienda</a>
+                        <a class="nav-link" href="{{route('productos')}}">Tienda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('servicios')}}">Servicios</a>
@@ -199,10 +199,5 @@
          <script src="https://kit.fontawesome.com/6b76d54a65.js" crossorigin="anonymous"></script>
          <script src="{{asset('js/boton_wsp.js')}}"></script>
          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
-
-
-
 </body>
 </html>
