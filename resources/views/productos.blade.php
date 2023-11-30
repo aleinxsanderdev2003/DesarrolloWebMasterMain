@@ -14,7 +14,6 @@
 
 </head>
 <body>
-
 @extends("layout.app")
 @section("content")
 <!-- Carrusel --><div id="carouselPromociones" class="carousel slide" data-bs-ride="carousel">
