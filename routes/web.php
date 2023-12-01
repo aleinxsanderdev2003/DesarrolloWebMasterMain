@@ -24,6 +24,12 @@ use App\Http\Controllers\LoginControlle;
 |
 */
 
+// prueba
+Route::get('/admin', function () {
+    return view('administrador');
+});
+
+
 
 Route::get('/', [LinkController::class, 'index'])->name('index');
 Route::get('/empresa', [LinkController::class, 'empresa'])->name('empresa');
