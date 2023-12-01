@@ -1,0 +1,57 @@
+/* Animación al hacer hover sobre la tarjeta */
+.product-card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Estilo adicional para los botones */
+.btn-primario,
+.btn-successo {
+    width: 100%;
+}
+
+/* Ajustes en la distribución del contenido */
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Estilo para el carrusel de promociones */
+
+.carousel-item img {
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
+}
+
+/* Estilo para las descripciones de las promociones */
+
+
+/* Estilo para los controles del carrusel */
+.carousel-control-prev,
+.carousel-control-next {
+    font-size: 2rem; /* Tamaño de la flecha */
+    color: #fff; /* Color de la flecha */
+}
+
+
+/* Ajustes para hacer el carrusel responsive */
+#carouselPromociones {
+    max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+    overflow: hidden;
+}
+
+/* Ajustes para hacer el texto en la imagen visible en dispositivos más pequeños */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Ajustes para hacer el texto más grande en dispositivos más pequeños */
+@media (max-width: 768px) {
+    .carousel-caption {
+        font-size: 1.5rem;
+    }
+}

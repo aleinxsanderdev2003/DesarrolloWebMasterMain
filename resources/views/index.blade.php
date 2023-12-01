@@ -138,7 +138,13 @@
           <div class="col-md-6">
             <div class="cotizacion-form">
               <h3 class="mb-4">Cotizar Ahora</h3>
-              <form>
+              @if(session('success'))
+              <div class="alert alert-success">
+                  {{ session('success') }}
+              </div>
+              @endif
+              <form id="contactForm" action="{{ route('enviar-mensaje2') }}" method="POST">
+                @csrf
                 <div class="form-group">
                   <label for="nombre">Nombre:</label>
                   <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
@@ -155,6 +161,13 @@
                   <label for="mensaje">Mensaje:</label>
                   <textarea class="form-control" id="mensaje" rows="3" placeholder="Ingrese su mensaje"></textarea>
                 </div>
+                <div class="form-group">
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+                    @error('g-recaptcha-response')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
                 <button type="submit" class="btn btn-primary">Enviar Cotización</button>
               </form>
             </div>
@@ -162,6 +175,39 @@
         </div>
       </div>
 
+      <script>
+        function onClick(e) {
+          e.preventDefault();
+          grecaptcha.enterprise.ready(async () => {
+            const token = await grecaptcha.enterprise.execute('6LcQwxwpAAAAACXFwtV3GQZbb2kK0yF21yQR5UTL', {action: 'LOGIN'});
+          });
+        }
+      </script>
+       <script>
+        function enviarMensaje() {
+      // Aquí puedes agregar la lógica para enviar el mensaje y actualizar la lista de consultas recientes
+      var nombre = document.getElementById("nombre").value;
+      var email = document.getElementById("email").value;
+      var telefono = document.getElementById("telefono").value;
+      var mensaje = document.getElementById("mensaje").value;
+
+      // Agrega la lógica para enviar el mensaje (puedes usar AJAX, Fetch, etc.)
+
+      // Actualiza la lista de consultas recientes
+      actualizarConsultas(nombre);
+    }
+
+    function actualizarConsultas(nombre) {
+      var consultasList = document.getElementById("consultasList");
+      var listItem = document.createElement("li");
+      listItem.className = "list-group-item";
+      listItem.textContent = "Nueva consulta - " + nombre;
+
+      // Agrega la nueva consulta al principio de la lista
+      consultasList.insertBefore(listItem, consultasList.firstChild);
+    }
+
+      </script>
 <br><br>
 <!-- Sección de Productos y Servicios -->
 <div class="container productos-section">
@@ -243,9 +289,10 @@
       </div>
     </div>
   </div>
+<br>
+<br>
 
-<br>
-<br>
+
 <!-- Sección de Testimonios -->
   <div class="container testimonials-section">
     <h2 class="section-title" style="font-family: 'Kdam Thmor Pro', sans-serif;">TESTIMONIOS</h2>

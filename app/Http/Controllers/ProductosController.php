@@ -129,8 +129,6 @@ public function tienda()
     // Retorna la vista 'tienda' con los datos necesarios para mostrar los productos, el carrito y el total
 }
 
-
-
 public function pago()
 {
     SDK::setAccessToken(Config::get('custom.ACCESS_TOKEN'));
