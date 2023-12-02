@@ -19,7 +19,7 @@
     <div class="container">
         <a href="{{route('productos')}}" class="navbar-brand">
             <img src="https://cdn-icons-png.flaticon.com/512/263/263085.png" alt="Regresar" class="regreso-icon">&nbsp;
-            Volver
+        
         </a>
         <a class="btn btn-primary float-end" id="carritoss" href="{{ route('tienda') }}">
             <img src="{{asset('img/carrito.png')}}" alt="Descripción de la imagen" width="30" height="30">
