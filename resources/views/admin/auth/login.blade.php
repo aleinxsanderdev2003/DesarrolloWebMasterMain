@@ -19,23 +19,25 @@ background-image: url('https://images.unsplash.com/photo-1581299327801-faeb40ea4
                         <h2 class="text-center">Login</h2>
                     </div>
                     <div class="card-body">
-                        <form class="form">
-                            <p class="form-title">Ingrese sesion para continuar</p>
-                             <div class="input-container">
-                               <input type="email" placeholder="Enter email">
-                               <span>
-                               </span>
-                           </div>
-                           <div class="input-container">
-                               <input type="password" placeholder="Enter password">
-                             </div>
-                              <button type="submit" class="submit">
-                             Iniciar Sesión
-                           </button>
+                        <form method="POST" action="{{ url('/admin/login') }}" class="form">
+                            @csrf
+
+                            <p class="form-title">Ingrese sesión para continuar</p>
+
+                            <div class="input-container">
+                                <input type="email" name="email" placeholder="Enter email" required>
+                            </div>
+
+                            <div class="input-container">
+                                <input type="password" name="password" placeholder="Enter password" required>
+                            </div>
+                             <button type="submit" class="submit">
+                                Iniciar Sesión
+                            </button>
 
                            <p class="signup-link">
                              Olvidaste tu contraseña?
-                             <a href="">Recuperar contraseña</a>
+                             <a href="{{ url('/admin/password/reset') }}">Recuperar contraseña</a>
                            </p>
                         </form>
                     </div>

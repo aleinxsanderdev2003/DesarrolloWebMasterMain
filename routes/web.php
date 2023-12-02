@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProductosController;
 use App\Http\Controllers\capturaController;
 use App\Http\Controllers\CarritoController;
-
+use App\Http\Controllers\AdminAuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\CategoriaController;
@@ -49,9 +49,6 @@ Route::get('/categorias/{categoria}', [ProductController::class, 'mostrarCategor
 Route::get('/productos', [ProductController::class, 'index'])->name('productos.index');
 Route::get('/categorias/{categoria}', [ProductController::class, 'mostrarCategoria']);
 
-/*AUTENTICACION*/
-Route::get('/login', [LoginController::class, 'index'])->name('login');
-
 
 /*BUSCADOR DE DOMINIO*/
 
@@ -85,3 +82,10 @@ Route::get('carrito/obtener-numero-productos', [CarritoController::class, 'obten
 
 
 
+
+// LOGIN Y AUTENTICACIÓN
+
+Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+Route::post('/admin/login', [AdminAuthController::class, 'login']);
+
+Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use AuthenticatesUsers;
+
 class LoginController extends Controller
 {
     public function index()
@@ -13,7 +15,7 @@ class LoginController extends Controller
 
     public function store(Request $request)
     {
-        $credentials = $request->only('username', 'password');
+        $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             return redirect()->intended('/admin');
