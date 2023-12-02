@@ -19,14 +19,14 @@
 <!-- Carrusel --><div id="carouselPromociones" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="https://images.unsplash.com/photo-1562280963-8a5475740a10?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Promoción 1">
+            <img src="img/banner/banner1.PNG" class="d-block w-100" alt="Promoción 1">
             <div class="carousel-caption d-md-block">
                 <h5>Promoción Especial</h5>
                 <p>¡Descuentos increíbles!</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="https://images.unsplash.com/photo-1562280960-9ec3350fd808?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="Promoción 2">
+            <img src="img/banner/banner2.PNG" class="d-block w-100" alt="Promoción 2">
             <div class="carousel-caption  d-md-block">
                 <h5>¡Oferta del Mes!</h5>
                 <p>Productos exclusivos a precios bajos.</p>

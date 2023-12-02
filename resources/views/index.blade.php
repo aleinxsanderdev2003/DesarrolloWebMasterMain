@@ -122,7 +122,7 @@
               <p>Diseñamos el Sitio Web que necesitas</p>
               <p>Contamos con la experiencia y los profesionales más capacitados para brindarte un servicio integral de Marketing Digital y Diseño Web que te permita diferenciarte en el mercado.</p>
               <div class="spacer"></div>
-              <a href="https://digitalmarketing.pe/nosotros" class="btn btn-primary">Nosotros</a>
+              <a href="{{route('empresa')}}" class="btn btn-primary">Nosotros</a>
               <div class="spacer"></div>
             </div>
           </div>
@@ -217,21 +217,21 @@
         <div class="producto-card">
           <h2 style="font-family: 'Kdam Thmor Pro', sans-serif;">Sistema de Ventas Web</h2>
           <p>Software administrador de compras, ventas e inventario de propósito general, orientado a todo tipo de negocios, podrá gestionar los principales procesos como cotizaciones, caja chica, gastos, balance, clientes, proveedores, múltiples ...</p>
-          <a href="#" class="btn btn-primary">VER MÁS</a>
+          <a href="{{route('productos')}}" class="btn btn-primary">VER MÁS</a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="producto-card">
           <h2 style="font-family: 'Kdam Thmor Pro', sans-serif;">Sistema de Ventas Web</h2>
           <p>Software administrador de compras, ventas e inventario de propósito general, orientado a todo tipo de negocios, podrá gestionar los principales procesos como cotizaciones, caja chica, gastos, balance, clientes, proveedores, múltiples ...</p>
-          <a href="#" class="btn btn-primary">VER MÁS</a>
+          <a href="{{route('productos')}}" class="btn btn-primary">VER MÁS</a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="producto-card">
           <h2 style="font-family: 'Kdam Thmor Pro', sans-serif;">Sistema de Ventas Web</h2>
           <p>Software administrador de compras, ventas e inventario de propósito general, orientado a todo tipo de negocios, podrá gestionar los principales procesos como cotizaciones, caja chica, gastos, balance, clientes, proveedores, múltiples ...</p>
-          <a href="#" class="btn btn-primary">VER MÁS</a>
+          <a href="{{route('productos')}}" class="btn btn-primary">VER MÁS</a>
         </div>
       </div>
       <!-- Agrega más productos y servicios según sea necesario -->

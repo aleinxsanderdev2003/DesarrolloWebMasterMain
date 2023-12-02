@@ -5,6 +5,9 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/servicios.css">
 <meta name="csrf-token" content="{{ csrf_token() }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Bungee+Spice&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xrXmPMSmBduyZba6tf+PrA8sCNxZP1BC8AotZZQGoH/OqZnRtXaQO4KKfZ67wLsfdd0R0VAfcgQpWwEG3bBEV4Mw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <div class="content_nosotros" style="margin-top:-30px">
@@ -96,7 +99,30 @@
 });
 
     </script>
+</div><div class="container" style="border-radius: 37px;
+background: #29a7d1;
+box-shadow: 16px 16px 32px #104354, -16px -16px 32px #42ffff;">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Imagen promocional -->
+      <img src="img/presentadornerito.png" alt="Promoción Especial" class="img-fluid">
+    </div>
+    <div class="col-md-6">
+      <!-- Contenido de la promoción -->
+      <div class="promotion-content">
+        <h2 style="font-family: 'Acme', sans-serif; font-family: 'Bungee Spice', sans-serif; color: #fff;">Promoción Especial</h2>
+        <ul style="color: #fff;">
+          <li>✅ Almacenamiento NVMe SSD Ilimitado</li>
+          <li>✅ Dominio Comercial e Internacional gratis un año (.COM )</li>
+          <!-- Agrega el resto de los elementos de la lista aquí -->
+        </ul>
+        <p class="price" style="color: #fff;">Antes: S/350 <span>AHORA: S/79.99</span></p>
+      </div>
+    </div>
+  </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
 
 @endsection

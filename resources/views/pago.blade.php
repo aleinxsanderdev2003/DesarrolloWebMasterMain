@@ -27,7 +27,6 @@
     </nav>
     <!--<a class="btn btn-primary float-end" id="carritoss">Carrito <span id="num_cart"
             class="badge bg-secondary">{{ session('carrito.productos') ? count(session('carrito.productos')) : 0 }}</span></a>
-
 -->
             <main>
                 <div class="container" id="cartass">

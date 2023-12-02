@@ -20,6 +20,7 @@
 /* Estilo para el carrusel de promociones */
 
 .carousel-item img {
+    margin-top: 40px;
     object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
 }
 
@@ -36,7 +37,8 @@
 
 /* Ajustes para hacer el carrusel responsive */
 #carouselPromociones {
-    max-height: 500px; /* Ajusta la altura máxima según tus necesidades */
+    margin-top: 40px;
+    max-height: 900px; /* Ajusta la altura máxima según tus necesidades */
     overflow: hidden;
 }
 
@@ -44,6 +46,7 @@
 .carousel-caption {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
+
     border-radius: 10px;
     color: #fff;
     text-align: center;
