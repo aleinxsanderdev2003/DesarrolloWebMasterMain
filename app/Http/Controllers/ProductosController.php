@@ -58,6 +58,7 @@ public function detalles()
     foreach ($productos as $producto) {
         $nombre = $producto->nombre;
         $descripcion = $producto->descripcion;
+        $linkdemo = $producto->linkDemo;
         $precio = $producto->precio;
         $id_categoria = $producto->id_categoria;
         $activo = $producto->activo;

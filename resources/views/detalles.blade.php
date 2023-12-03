@@ -35,6 +35,7 @@
                     if ($producto) {
                         $nombre = $producto->nombre;
                         $descripcion = $producto->descripcion;
+                        $linkdemo = $producto->linkDemo;
                         $precio = $producto->precio;
                         $descuento = $producto->descuento;
                         $precio_desc = $precio - (($precio * $descuento) / 100);
@@ -116,7 +117,9 @@
                         <p>Descripción: {{ $descripcion }}</p>
 
                         <div class="d-grid gap-3 col-10 mx-auto">
-                            <button class="btn btn-primary" type="button">Comprar ahora</button>
+                            {{-- <button class="btn btn-primary" type="button">Prueba Demo</button> --}}
+                            <button class="btn btn-primary" type="button" onclick="abrirDemo()">Prueba Demo</button>
+
                             <button class="btn btn-outline-primary" type="button" onclick="addProducto({{ $id }}, '{{ $token_tmp }}')">agregar al carrito</button>
 
 
@@ -129,7 +132,20 @@
 
         </main>
 
+        {{-- prueba  --}}
 
+        <script>
+            function abrirDemo() {
+                // Puedes verificar si el enlace demo está definido antes de abrir la ventana
+                if ("{{ $linkdemo }}") {
+                    window.open("{{ $linkdemo }}", "_blank");
+                } else {
+                    alert("Enlace de demo no disponible.");
+                }
+            }
+        </script>
+
+        {{-- fin --}}
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
