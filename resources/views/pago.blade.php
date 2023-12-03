@@ -110,38 +110,6 @@
         </div>
     </main>
 
-                                {{-- @if ($lista_carrito == null)
-                                    <tr>
-                                        <td colspan="5" class="text-center"><b>Lista vacía</b></td>
-                                    </tr>
-                                @else
-                                    @php
-                                        $total = 0;
-                                    @endphp
-                                    @foreach ($lista_carrito as $producto)
-                                        @php
-                                            $_id = $producto['id'];
-                                            $nombre = $producto['nombre'];
-                                            $precio = $producto['precio'];
-                                            $descuento = $producto['descuento'];
-                                            $precio_desc = $precio - ($precio * $descuento) / 100;
-                                            $cantidad = $producto['cantidad'];
-                                            $subtotal = $cantidad * $precio_desc;
-                                            $total += $subtotal;
-
-
-
-                                        @endphp
-                                        <tr>
-                                            <td>{{ $nombre }}</td>
-
-                                            <td>
-                                                <div id="subtotal_{{ $_id }}" name="subtotal[]">
-                                                    {{ config('custom.MONEDA') . $subtotal }}</div>
-                                            </td>
-                                    @endforeach
-                                @endif --}}
-
 
 
 
@@ -155,7 +123,6 @@
         <script src="https://www.paypal.com/sdk/js?client-id={{ config('custom.CLIENT_ID') }}&currency={{ config('custom.CURRENCY') }}"></script>
 
 
-    {{-- <script src="https://www.paypal.com/sdk/js?client-id={{ config('custom.CLIENT_ID') }}&currency={{ config('custom.CURRENCY') }}"></script> --}}
 
 
     <script>

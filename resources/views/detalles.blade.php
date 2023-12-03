@@ -38,6 +38,28 @@
                         $precio = $producto->precio;
                         $descuento = $producto->descuento;
                         $precio_desc = $precio - (($precio * $descuento) / 100);
+
+                        // aqui coloca el codigo
+
+                  // Nuevo código adaptado a Laravel
+        $dir_imagenes = 'img/productos/'.$id.'/';
+        $rutaImg = asset($dir_imagenes . 'principal.jpg');
+
+        if (!\File::exists(public_path($dir_imagenes . 'principal.jpg'))) {
+            $rutaImg = asset('img/no-photo.jpg');
+        }
+
+        $imagenes = [];
+        $files = \File::files(public_path($dir_imagenes));
+
+        foreach ($files as $file) {
+            $archivo = pathinfo($file)['basename'];
+            if ($archivo != 'principal.jpg' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpeg'))) {
+                $imagenes[] = asset($dir_imagenes . $archivo);
+            }
+        }
+
+                        // Fin del código adaptado
                     } else {
                         echo 'Error al procesar la petición';
                         exit;
@@ -47,7 +69,32 @@
 
                 <div class="row">
                     <div class="col-md-6 order-md-1">
-                        <img src="{{ asset('img/productos/' . $id . '/principal.jpg') }}" alt="" class="img-fluid">
+
+                        {{-- prueba de carousel --}}
+                        <div id="carouselImages" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{ $rutaImg }}" alt="Imagen principal" class="d-block w-100">
+                                </div>
+
+                                @foreach($imagenes as $img)
+                                <div class="carousel-item">
+                                    <img src="{{ $img }}" alt="Imagen adicional" class="d-block w-100">
+                                </div>
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselImages" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselImages" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                        {{--Fin  --}}
+
+                        {{-- <img src="{{ asset('img/productos/' . $id . '/principal.jpg') }}" alt="" class="img-fluid"> --}}
                     </div>
 
                     <div class="col-md-6 order-md-2">
@@ -84,9 +131,11 @@
 
 
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
     <script>
         // Función para agregar un producto al carrito mediante una petición AJAX
         function addProducto(id, token) {
