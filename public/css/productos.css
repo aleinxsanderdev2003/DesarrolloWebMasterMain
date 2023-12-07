@@ -20,7 +20,7 @@
 /* Estilo para el carrusel de promociones */
 
 .carousel-item img {
-    margin-top: 40px;
+    margin-top: 30px;
     object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */
 }
 

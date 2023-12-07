@@ -12,6 +12,10 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\DomainSearchController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FormularioController;
+use App\Http\Controllers\AdminController;
+
+use App\Http\Controllers\Admin\AdminProductController;
+/*
 /*
 use App\Http\Controllers\LoginControlle;
 |--------------------------------------------------------------------------
@@ -25,9 +29,6 @@ use App\Http\Controllers\LoginControlle;
 */
 
 // prueba
-Route::get('/admin', function () {
-    return view('administrador');
-});
 
 
 
@@ -58,9 +59,7 @@ Route::post('/buscar-dominio', [DomainSearchController::class,'checkAvailability
 
 
 Route::post('/enviar-mensaje', [ContactController::class, 'enviarMensaje'])->name('enviar-mensaje');
-Route::post('/enviar-mensaje2', [FormularioController::class, 'enviarMensaje'])->name('enviar-mensaje2');
-
-
+Route::post('/enviar-mensaje2', [FormularioController::class, 'enviarMensaje2'])->name('enviar-mensaje2');
 
 /* prueba de rutas tienda */
 
@@ -89,3 +88,20 @@ Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin
 Route::post('/admin/login', [AdminAuthController::class, 'login']);
 
 Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
+
+
+
+// ADMININSTRACION
+
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+
+
+
+// PRODUCTOS
+Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
+    Route::get('productos', [AdminProductController::class, 'index'])->name('productos.index');
+    Route::get('productos/agregar', [AdminProductController::class, 'agregar'])->name('productos.agregar');
+    Route::post('productos/agregar', [ProductosController::class, 'store'])->name('productos.store');
+    Route::get('productos/ver-todos', [AdminProductController::class, 'verTodos'])->name('productos.ver-todos');
+    // Agrega más rutas para CRUD según sea necesario
+});

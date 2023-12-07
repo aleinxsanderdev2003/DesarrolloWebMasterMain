@@ -213,3 +213,40 @@ button {
     border-bottom-left-radius: 0;
 }
 
+
+.promotion-container {
+    border-radius: 37px;
+    background: #29a7d1;
+    box-shadow: 16px 16px 32px #104354, -16px -16px 32px #42ffff;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .promotion-content h2 {
+    font-family: 'Acme', sans-serif;
+    font-family: 'Bungee Spice', sans-serif;
+    color: #fff;
+  }
+
+  .promotion-content ul {
+    color: #fff;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .promotion-content ul li::before {
+    content: '✅ ';
+  }
+
+  .price {
+    color: #fff;
+  }
+
+  .price span {
+    font-weight: bold;
+  }
+
+  .promotion-image {
+    max-width: 150%;
+    height: auto;
+  }

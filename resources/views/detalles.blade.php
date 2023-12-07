@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Desarrollo Web Master</title>
+    <meta property="og:title" content="Contacto | Diseño de páginas web | Creación de páginas web" />
+    <link rel="icon" href="{{asset('img/logo.png')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
 </head>
 <body>
-    <a href="{{ route('tienda') }}" class="btn btn-primary float-end" id="carritoss">Carrito <span id="num_cart" class="badge bg-secondary">{{ config('custom.num_cart') }}</span></a>
+    @extends("layout.app")
+    @section("content")
+    <div class="detalles__compras" style="margin-top:80px">
+    <a style=""  href="{{ route('tienda') }}" class="btn btn-primary float-end" id="carritoss">Carrito <span id="num_cart" class="badge bg-secondary">{{ config('custom.num_cart') }}</span></a>
         <main>
             <div class="container" id="cartass">
                 @php
@@ -177,6 +182,7 @@
         }
     </script>
 
-
+</div>
 </body>
 </html>
+@endsection

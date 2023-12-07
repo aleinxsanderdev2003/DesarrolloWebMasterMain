@@ -1,0 +1,13 @@
+#sidebar {
+    height: 100vh;
+    background: #343a40; /* Color de fondo del sidebar */
+    color: #fff; /* Color del texto en el sidebar */
+  }
+
+  #sidebar a {
+    color: #fff; /* Color de los enlaces en el sidebar */
+  }
+
+  #sidebar .active {
+    background-color: #007bff; /* Color de fondo para la pestaña activa */
+  }

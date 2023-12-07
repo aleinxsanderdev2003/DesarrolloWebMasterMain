@@ -99,28 +99,43 @@
 });
 
     </script>
-</div><div class="container" style="border-radius: 37px;
-background: #29a7d1;
-box-shadow: 16px 16px 32px #104354, -16px -16px 32px #42ffff;">
-  <div class="row">
-    <div class="col-md-6">
-      <!-- Imagen promocional -->
-      <img src="img/presentadornerito.png" alt="Promoción Especial" class="img-fluid">
-    </div>
-    <div class="col-md-6">
-      <!-- Contenido de la promoción -->
-      <div class="promotion-content">
-        <h2 style="font-family: 'Acme', sans-serif; font-family: 'Bungee Spice', sans-serif; color: #fff;">Promoción Especial</h2>
-        <ul style="color: #fff;">
-          <li>✅ Almacenamiento NVMe SSD Ilimitado</li>
-          <li>✅ Dominio Comercial e Internacional gratis un año (.COM )</li>
-          <!-- Agrega el resto de los elementos de la lista aquí -->
-        </ul>
-        <p class="price" style="color: #fff;">Antes: S/350 <span>AHORA: S/79.99</span></p>
+</div>
+<div class="container promotion-container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Imagen promocional -->
+        <img src="img/presentadornerito.png" alt="Promoción Especial" class="img-fluid promotion-image">
+     </div>
+      <div class="col-md-6">
+        <!-- Contenido de la promoción -->
+        <div class="promotion-content">
+          <h2>Promoción Especial</h2>
+          <ul>
+            <li>Almacenamiento NVMe SSD Ilimitado</li>
+            <li>Dominio Comercial e Internacional gratis un año (.COM )</li>
+            <li>Cuentas de Correos Ilimitadas</li>
+            <li>Cuentas FTP Ilimitadas</li>
+            <li>Bases De Datos Ilimitadas</li>
+            <li>Transferencia Mensual Ilimitada</li>
+            <li>Subdominios Ilimitados</li>
+            <li>Dominios Adicionales Ilimitados</li>
+            <li>Administrador cPanel (Cuenta principal)</li>
+            <li>Servidores de nombres privados</li>
+            <li>Liet's Encrypt + HTTP/3 Supported</li>
+            <li>Certificado SSL Gratis</li>
+            <li>Soporte Técnico</li>
+            <li>Sistema de Backups Diarios</li>
+            <li>WordPress pre-instalado (Softaculous)</li>
+            <li>Servidores Nvme + LiteSpeed</li>
+            <li>Migración gratuita</li>
+            <li>Soporte Personalizado 24/7</li>
+          </ul>
+          <p class="price">Antes: S/350 <span>AHORA: S/79.99</span></p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>

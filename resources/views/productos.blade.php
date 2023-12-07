@@ -52,9 +52,9 @@
                     Categorías
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item" href="#">Categoría 1</a></li>
-                    <li><a class="dropdown-item" href="#">Categoría 2</a></li>
-                    <li><a class="dropdown-item" href="#">Categoría 3</a></li>
+                    <li><a class="dropdown-item" href="#">Sistemas web</a></li>
+                    <li><a class="dropdown-item" href="#">Sitios Webs</a></li>
+                    <li><a class="dropdown-item" href="#">Ecommerce</a></li>
                     <!-- Agrega más opciones de categorías según sea necesario -->
                 </ul>
             </div>

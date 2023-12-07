@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Anhskohbo\NoCaptcha\Facades\NoCaptcha;
 class FormularioController extends Controller
 {
-    public function enviarMensaje(Request $request)
+    public function enviarMensaje2(Request $request)
     {
         // Validar el formulario
         $request->validate([

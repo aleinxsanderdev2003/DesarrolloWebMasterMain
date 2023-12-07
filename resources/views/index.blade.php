@@ -143,7 +143,7 @@
                   {{ session('success') }}
               </div>
               @endif
-              <form id="contactForm" action="{{ route('enviar-mensaje2') }}" method="POST">
+              <form id="contactForm" action="{{route('enviar-mensaje2')}}" method="POST">
                 @csrf
                 <div class="form-group">
                   <label for="nombre">Nombre:</label>
