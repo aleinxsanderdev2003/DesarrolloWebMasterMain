@@ -95,13 +95,22 @@ Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admi
 
 Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
 
-
-
 // PRODUCTOS
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::get('productos', [AdminProductController::class, 'index'])->name('productos.index');
     Route::get('productos/agregar', [AdminProductController::class, 'agregar'])->name('productos.agregar');
-    Route::post('productos/agregar', [ProductosController::class, 'store'])->name('productos.store');
+    Route::post('productos/agregar', [AdminProductController::class, 'store'])->name('productos.store');
     Route::get('productos/ver-todos', [AdminProductController::class, 'verTodos'])->name('productos.ver-todos');
     // Agrega más rutas para CRUD según sea necesario
 });
+
+// En tu archivo de rutas (web.php o similar)
+// Rutas en web.php
+Route::put('admin/productos/actualizar/{id}', [AdminProductController::class, 'actualizarProducto'])->name('admin.productos.actualizar');
+
+// Ruta para procesar la eliminación de un producto
+Route::delete('admin/productos/eliminar/{id}', [AdminProductController::class, 'eliminarProducto'])->name('admin.productos.eliminar');
+
+Route::get('admin/productos/editar/{id}', [AdminProductController::class, 'editar'])->name('admin.editar_productos');
+
+
