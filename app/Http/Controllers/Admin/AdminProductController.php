@@ -113,6 +113,8 @@ class AdminProductController extends Controller
         // Actualiza los campos del producto con los valores del formulario
         $producto->nombre = $request->input('nombre');
         // Agrega otros campos según tus necesidades
+        $producto->descripcion = $request->input('descripcion');
+        $producto->precio = $request->input('precio');
 
         // Guarda los cambios en la base de datos
         $producto->save();
