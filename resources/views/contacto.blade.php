@@ -51,6 +51,38 @@ box-shadow:  20px 20px 60px #2aaeb8,
         </div>
     </div>
 </div>
+
+   <!-- Sección de Contacto -->
+   <section id="contacto" class="bg-light py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">¡Contáctanos por WhatsApp!</h2>
+        <div class="row">
+            <!-- Número de WhatsApp 1 -->
+            <div class="col-md-4">
+                <a href="https://wa.link/eq0bdn" target="_blank" class="whatsapp-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" width="80px" alt="WhatsApp 1" class="img-fluid">
+                    <p>+51 933973546</p>
+                </a>
+            </div>
+            <!-- Número de WhatsApp 2 -->
+            <div class="col-md-4">
+                <a href="https://wa.link/3xdzt8" target="_blank" class="whatsapp-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" width="80px" alt="WhatsApp 2" class="img-fluid">
+                    <p>+51 914 039 964</p>
+                </a>
+            </div>
+            <!-- Número de WhatsApp 3 -->
+            <div class="col-md-4">
+                <a href="https://wa.me/555555555" target="_blank" class="whatsapp-link">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" width="80px" alt="WhatsApp 3" class="img-fluid">
+                    <p>+593 99 829 4516</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <script>
     function onClick(e) {
       e.preventDefault();

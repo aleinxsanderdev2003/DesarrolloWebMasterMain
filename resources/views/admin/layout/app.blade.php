@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>Administracion</title>
-   
+
     <meta property="og:title" content="Contacto | Diseño de páginas web | Creación de páginas web" />
     <link rel="icon" href="{{asset('img/logo.png')}}">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
@@ -27,8 +27,8 @@
                 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                        <div class="sidebar-brand-icon rotate-n-15">
-                            <i class="fas fa-laugh-wink"></i>
+                        <div class="sidebar-brand-icon">
+                            <img src="{{asset('img/logo.png')}}" width="50px" alt="">
                         </div>
                         <div class="sidebar-brand-text mx-3">ADMINISTRADOR</div>
                     </a>
