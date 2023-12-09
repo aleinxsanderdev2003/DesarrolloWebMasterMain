@@ -28,6 +28,8 @@ class ProductosController extends Controller
 
     foreach ($productos as $producto) {
         $id = $producto->id;
+        $imagen = $producto->imgProducto;
+        $producto->imagen = $imagen;
         $token_tmp = hash_hmac('sha1', $id, $keyToken); // Calcula un token temporal utilizando el ID del producto y la clave $keyToken
         $producto->token_tmp = $token_tmp; // Asigna el token temporal al objeto $producto
     }

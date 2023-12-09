@@ -38,8 +38,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="imagen">Imagen del Producto:</label>
-                        <input type="file" class="form-control-file" id="imagen" name="imagen" accept="image/*">
+                        <label for="linkDemo">Enlace de Demostración:</label>
+                        <input type="text" class="form-control" id="linkDemo" name="linkDemo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="imgProducto">Imagen del Producto:</label>
+                        <input type="file" class="form-control-file" id="imgProducto" name="imgProducto" accept="image/*">
                     </div>
 
                     <button type="submit" class="btn btn-primary">Agregar Producto</button>

@@ -20,12 +20,17 @@ class AdminProductController extends Controller
     public function verTodos()
     {
         $productos = Producto::where('activo', 1)->get();
+        foreach ($productos as $producto){
+            $imagen = $producto->imgProducto;
+        $producto->imagen = $imagen;
+        }
 
         return view('admin.ver-todos-productos')->with('productos', $productos);
     }
 
     public function store(Request $request)
     {
+
         // Validación de campos (ajústalo según tus necesidades)
         $request->validate([
             'nombre' => 'required|string|max:200',
@@ -33,7 +38,8 @@ class AdminProductController extends Controller
             'precio' => 'required|numeric',
             'id_categoria' => 'required|integer',
             'activo' => 'required|boolean',
-            'imagen' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'linkDemo' => 'nullable|string', // Puedes ajustar las reglas según tus necesidades
+            'imgProducto' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
         // Crear el nuevo producto
@@ -45,10 +51,14 @@ class AdminProductController extends Controller
         $producto->activo = $request->activo;
 
         // Guardar la imagen (si se proporciona)
-        if ($request->hasFile('imagen')) {
-            $imagenPath = $request->file('imagen')->store('img/productos/' . $producto->id, 'public');
-            $producto->imagen = $imagenPath;
+        if ($request->hasFile('imgProducto')) {
+            $imagenPath = $request->file('imgProducto')->store('img/productos/' . $producto->id, 'public');
+            $producto->imgProducto = $imagenPath;
+
         }
+        $producto->linkDemo = $request->input('linkDemo');
+
+
 
         $producto->save();
 

@@ -9,16 +9,8 @@
             @foreach ($productos as $producto)
                 <div class="col">
                     <div class="card h-100 border-0 shadow product-card">
-                        @php
-                            $id = $producto->id;
-                            $imagen = "img/productos/" . $id . "/principal.jpg";
 
-                            if (!file_exists($imagen)) {
-                                $imagen = "img/artesania4.jpg";
-                            }
-                        @endphp
-
-                        <img src="{{ asset($imagen) }}" class="card-img-top" alt="{{ $producto->nombre }}">
+                        <img src="{{ asset('storage/' . $producto->imgProducto) }}" class="card-img-top" alt="{{ $producto->nombre }}">
 
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">{{ $producto->nombre }}</h5>
