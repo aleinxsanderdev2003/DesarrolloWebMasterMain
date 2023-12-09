@@ -56,12 +56,12 @@
 
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="true" aria-controls="collapseTwo">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVentas"
+                            aria-expanded="true" aria-controls="collapseVentas">
                             <i class="fas fa-fw fa-shopping-cart"></i>
                             <span>Ventas</span>
                         </a>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div id="collapseVentas" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Todos:</h6>
                                 <a class="collapse-item" href="buttons.html">Agregar Productos</a>
@@ -79,12 +79,12 @@
                     </div>
 
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                            aria-expanded="true" aria-controls="collapseTwo">
+                        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsecomponents"
+                            aria-expanded="true" aria-controls="collapsecomponents">
                             <i class="fas fa-fw fa-cog"></i>
                             <span>Componentes</span>
                         </a>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div id="collapsecomponents" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                             <div class="bg-white py-2 collapse-inner rounded">
                                 <h6 class="collapse-header">Custom Components:</h6>
                                 <a class="collapse-item" href="buttons.html">Buttons</a>
