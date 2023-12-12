@@ -48,22 +48,23 @@
                         // aqui coloca el codigo
 
                   // Nuevo código adaptado a Laravel
-        $dir_imagenes = 'img/productos/'.$id.'/';
-        $rutaImg = asset($dir_imagenes . 'principal.jpg');
 
-        if (!\File::exists(public_path($dir_imagenes . 'principal.jpg'))) {
-            $rutaImg = asset('img/no-photo.jpg');
-        }
+                    // $dir_imagenes = 'img/productos/'.$id.'/';
+                    // $rutaImg = asset($dir_imagenes . 'principal.jpg');
 
-        $imagenes = [];
-        $files = \File::files(public_path($dir_imagenes));
+                    // if (!\File::exists(public_path($dir_imagenes . 'principal.jpg'))) {
+                    //     $rutaImg = asset('img/no-photo.jpg');
+                    // }
 
-        foreach ($files as $file) {
-            $archivo = pathinfo($file)['basename'];
-            if ($archivo != 'principal.jpg' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpeg'))) {
-                $imagenes[] = asset($dir_imagenes . $archivo);
-            }
-        }
+                    // $imagenes = [];
+                    // $files = \File::files(public_path($dir_imagenes));
+
+                    // foreach ($files as $file) {
+                    //     $archivo = pathinfo($file)['basename'];
+                    //     if ($archivo != 'principal.jpg' && (strpos($archivo, 'jpg') || strpos($archivo, 'jpeg'))) {
+                    //         $imagenes[] = asset($dir_imagenes . $archivo);
+                    //     }
+                    // }
 
                         // Fin del código adaptado
                     } else {
@@ -77,7 +78,7 @@
                     <div class="col-md-6 order-md-1">
 
                         {{-- prueba de carousel --}}
-                        <div id="carouselImages" class="carousel slide">
+                        {{-- <div id="carouselImages" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img src="{{ $rutaImg }}" alt="Imagen principal" class="d-block w-100">
@@ -97,11 +98,11 @@
                               <span class="carousel-control-next-icon" aria-hidden="true"></span>
                               <span class="visually-hidden">Next</span>
                             </button>
-                          </div>
+                          </div> --}}
                         {{--Fin  --}}
 
-                        {{-- <img src="{{ asset('img/productos/' . $id . '/principal.jpg') }}" alt="" class="img-fluid"> --}}
-                    </div>
+                        <img src="{{ asset('storage/' . $producto->imgProducto) }}" class="card-img-top" alt="{{ $producto->nombre }}">
+                        </div>
 
                     <div class="col-md-6 order-md-2">
 

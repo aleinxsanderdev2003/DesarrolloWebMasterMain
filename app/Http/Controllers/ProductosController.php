@@ -64,6 +64,7 @@ public function detalles()
         $precio = $producto->precio;
         $id_categoria = $producto->id_categoria;
         $activo = $producto->activo;
+     
     }
 
     return view('detalles')->with('productos', $productos);
