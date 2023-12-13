@@ -80,20 +80,26 @@ Route::post('/carrito/actualizar-carrito', [CarritoController::class, 'actualiza
 Route::get('carrito/obtener-numero-productos', [CarritoController::class, 'obtenerNumeroProductos'])->name('carrito.obtenerNumeroProductos');
 
 
+// Ejemplo con Laravel Jetstream
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 
+// Ejemplo si estás definiendo las rutas manualmente
+Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+Route::get('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
 
-// LOGIN Y AUTENTICACIÓN
-
-Route::get('/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
+// Rutas de autenticación para administradores
+Route::prefix('admin')->group(function () {
+    Route::get('/login', 'AdminAuthController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'AdminAuthController@login');
+    Route::post('/logout', 'AdminAuthController@logout')->name('admin.logout');
+});
+Route::get('/admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminAuthController::class, 'login']);
-
-Route::post('/admin/logout', [AdminAuthController::class, 'logout'])->name('admin.logout');
-
+// Otras rutas relacionadas con la autenticación del administrador
 
 
-// ADMININSTRACION
-
-Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+// Ruta del dashboard del administrador
+Route::get('/admin/dashboard', [AdminController::class,'index'])->name('admin.dashboard')->middleware('auth:admin');
 
 // PRODUCTOS
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {

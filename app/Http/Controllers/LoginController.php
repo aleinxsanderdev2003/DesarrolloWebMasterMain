@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Admin;
 use AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -13,14 +14,20 @@ class LoginController extends Controller
         return view('admin.auth.login');
     }
 
-    public function store(Request $request)
+
+    public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('/admin');
-        } else {
-            return redirect()->route('login')->with('error', 'Usuario o contraseña incorrectos.');
+        if (Auth::guard('admin')->attempt($credentials)) {
+            return redirect()->route('admin.dashboard');
         }
+
+        return redirect()->route('admin.login')->withErrors(['email' => 'Credenciales incorrectas']);
+    }
+
+    public function showLoginForm()
+    {
+        return view('admin.auth.login');
     }
 }
